@@ -6,6 +6,8 @@ export const customerReducer = (state = [], action) => {
             return [...action.payload]
         case "DELETE_CUSTOMER":
             return [...state]    
+        case "CREATE_CUSTOMER":
+            return [state.contactname, action.payload]  
 
         default:
             return state;
